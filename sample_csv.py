@@ -2,20 +2,27 @@ import os
 import random
 import csv
 
-NUMBER_OF_CHOICES = 4
+NUMBER_OF_CHOICES = 5
 
 def load_handles(csv_file_path):
     with open(csv_file_path) as fin:
-        csv_reader = csv.reader(fin)
-        return [handle[0] for handle in csv_reader if handle[0][0]=='@']    
+        csv_reader = csv.reader(fin)  # list of lists [[col1, col2, col3],[col1, col2, col3]]
+        return [
+            handle[0] 
+            for handle in csv_reader 
+            if handle[0][0]=='@'
+        ]    # returns a list
 
 
 def make_selection(population, choice_count):
-    return random.sample(population, k=choice_count)
+    return random.sample(population, k=choice_count)  # returns a list of random selection
 
 
 def print_results(messages):    
-    [print(msg) for msg in messages]
+    [
+        print(msg) 
+        for msg in messages
+    ]
 
 
 def create_message(handle):
@@ -25,8 +32,8 @@ def create_message(handle):
 def main():
     csv_filepath = os.path.join('.','handles.csv')
     handles = load_handles(csv_filepath)
-    selection = make_selection(handles,choice_count=NUMBER_OF_CHOICES)
-    messages = map(create_message, selection)
+    selection = make_selection(handles, choice_count=NUMBER_OF_CHOICES) # result in 5 items
+    messages = map(create_message, selection)  # list
     print_results(messages)
 
 
