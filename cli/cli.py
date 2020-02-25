@@ -18,7 +18,7 @@ def main():
     type=click.Path(exists=True, resolve_path=True),
     default=get_project_root().joinpath('handles.csv').as_posix(),
     show_default=True,
-    help="specify the file path containing list of handles"
+    help="specify csv filepath, default is `handles.csv` in project root"
 )
 @click.option(
     '-n',

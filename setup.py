@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='twitter_picker',
-    version='0.0.1',
+    version='0.0.2',
     author='Ben McNeill',
     url='https://github.com/bfmcneill/twitter_picker',
     packages=find_packages(),

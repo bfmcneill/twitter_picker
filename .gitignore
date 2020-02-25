@@ -9,6 +9,7 @@ __pycache__/
 
 # Data files
 *.csv
+.~README.md
 
 # IDE settings
 .vscode/
