@@ -71,3 +71,5 @@ Options:
 - push the csv data into a set before making random selection to ensure one entry per handle
 - allow user to specify if source file has a header or not
 - detect if the calling environment can handle emojis - we want emojis in the message!!!
+- test functions for reporting and csv parsing
+- mock.path to give random.sample some expected returns
