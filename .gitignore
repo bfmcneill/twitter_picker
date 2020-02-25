@@ -1,1 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.pytest_cache/
+
+
+# Distribution
+*.egg-info/
+*.egg
+
+# Data files
 *.csv
+
+# IDE settings
+.vscode/
