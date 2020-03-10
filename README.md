@@ -4,10 +4,10 @@
 
 # Setup
 1. clone repo
-2. create virtual environment (on linux: ```make setup```)
+2. create virtual environment (on linux: `make setup`)
 3. activate virtual environment
-4. update pip & setuptools & install requirements.txt (on linux: ```make install```)
-
+4. update pip & setuptools & install requirements.txt (on linux: `make install`)
+5. Run the tests `pytest --cov-report html --cov=twitter_picker tests/`
 
 
 
@@ -47,11 +47,18 @@ Options:
   --help                  Show this message and exit.
 ```
 
-
+## Usage-Example 3
+```bash
+twpicker random-choices --filepath ./data.csv --n-select 3
+```
 
 
 
 # version history
+
+## 0.0.3
+ - improved test coverage to 100% and added some todo items
+ - refactored cli into the pip installable package
 
 ## 0.0.2
  - changed structure to split cli from twitter picker package, removed the need for if name == "main"

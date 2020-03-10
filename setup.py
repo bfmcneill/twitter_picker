@@ -12,7 +12,7 @@ setup(
     # Scripts
     entry_points={
         'console_scripts': [
-            'twpicker=cli.cli:main',
+            'twpicker=twitter_picker.cli.cli:main',
         ],
     },
 

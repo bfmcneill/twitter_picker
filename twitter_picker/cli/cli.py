@@ -1,5 +1,5 @@
 """Console script for Twitter Picker."""
-
+import os
 import click
 from twitter_picker import make_selection, load_handles
 from twitter_picker.utils import get_project_root
@@ -8,6 +8,19 @@ from twitter_picker.utils import get_project_root
 @click.group()
 def main():
     """Main Entrypoint"""
+
+
+@main.command()
+@click.argument('name', default='John')
+@click.option('--mobile', '-m', required=True)
+def add(name, mobile):
+    '''Add Contact
+    https://github.com/Stranger6667/pytest-click
+    https://dev.to/wangonya/testing-click-applications-with-pytest-2o79
+    '''
+    click.echo(f'{name} Added!')
+    click.echo({'mobile': mobile})
+    click.echo("os.getenv('USER')=={}".format(os.environ.get('USER', 'Anon')))
 
 
 @main.command()
